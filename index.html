@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligência Artificial no Dia a Dia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Fundo escuro */
+            color: #e0e0e0; /* Texto claro para legibilidade */
+            line-height: 1.6;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #a5d6ff; /* Azul claro para títulos */
+        }
+        .hero {
+            background: linear-gradient(135deg, #1e1e1e, #4a148c); /* Gradiente escuro com roxo */
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            background-color: #ffffff;
+            color: #4a4aff;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animação de hover */
+        }
+        .cta-button:hover {
+            background-color: #4a4aff;
+            color: #ffffff;
+            transform: translateY(-3px); /* Efeito de elevação no hover */
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits li {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animação individual para itens */
+        }
+        .benefits li.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .benefits li::before {
+            content: '✅';
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+        .instructor {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .instructor img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s; /* Animação de hover na imagem */
+        }
+        .instructor img:hover {
+            transform: scale(1.05);
+        }
+        .testimonials {
+            background-color: #1e1e1e; /* Fundo escuro para depoimentos */
+        }
+        .testimonial {
+            margin-bottom: 20px;
+            font-style: italic;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animação para depoimentos */
+        }
+        .testimonial.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .faq {
+            background-color: #1e1e1e; /* Fundo escuro para FAQ */
+        }
+        .faq details {
+            margin-bottom: 20px;
+            transition: background-color 0.3s; /* Animação em hover para details */
+        }
+        .faq details:hover {
+            background-color: #2a2a2a;
+        }
+        .final-call {
+            text-align: center;
+            background: linear-gradient(135deg, #1e1e1e, #4a148c); /* Gradiente escuro com roxo */
+            color: #ffffff;
+        }
+        #whatsapp-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            z-index: 1000; /* Garante que fique sobre outros elementos */
+        }
+        #whatsapp-fixed:hover {
+            transform: scale(1.1);
+        }
+        /* Animações sutis para seções */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .instructor {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho Hero -->
+    <section class="hero" id="hero">
+        <h1>Aprenda Inteligência Artificial de forma prática — no conforto da sua casa!</h1>
+        <p>Aulas online e individuais, feitas sob medida para você. Mesmo que nunca tenha usado IA antes, você vai aprender a dominar ferramentas como ChatGPT, Canva e muito mais para transformar o seu dia a dia.</p>
+        <a href="https://wa.me/5521988781658?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20aulas%20de%20IA!" class="cta-button">Quero aprender agora</a>
+    </section>
+
+    <!-- Sobre o Curso -->
+    <section id="sobre">
+        <h2>Sobre o Curso</h2>
+        <p>O curso “Inteligência Artificial no Dia a Dia” foi criado para quem quer aproveitar o poder da IA sem precisar ser expert em tecnologia.</p>
+        <p>São aulas 100% online e individuais, com explicações passo a passo e foco total em aplicações práticas: produtividade, criatividade, trabalho e lazer.</p>
+    </section>
+
+    <!-- O que você vai aprender -->
+    <section class="benefits" id="aprenda">
+        <h2>O que você vai aprender</h2>
+        <ul>
+            <li>Como usar o ChatGPT para escrever textos, planejar tarefas, criar mensagens e ideias.</li>
+            <li>Como usar o Canva com IA para gerar imagens, designs e apresentações automaticamente.</li>
+            <li>Como criar planilhas, PDFs e documentos com ajuda da inteligência artificial.</li>
+            <li>Como usar IA para melhorar seu trabalho, economizar tempo e ter novas ideias.</li>
+            <li>Como integrar várias ferramentas para automatizar tarefas e se destacar no mercado.</li>
+        </ul>
+    </section>
+
+    <!-- Como funcionam as aulas -->
+    <section id="aulas">
+        <h2>Como funcionam as aulas</h2>
+        <p>As aulas são individuais e online, com duração de 1 hora.</p>
+        <p>Você pode escolher entre:</p>
+        <ul>
+            <li><strong>Aula única:</strong> R$ 129,90 (1h de prática e aprendizado direto)</li>
+            <li><strong>Pacote com 4 aulas:</strong> R$ 459,90 (economize R$ 60 e domine tudo passo a passo)</li>
+        </ul>
+        <p>O conteúdo e o ritmo das aulas são totalmente personalizados para o seu nível e seus objetivos.</p>
+    </section>
+
+    <!-- Quem ensina -->
+    <section id="instrutor">
+        <h2>Quem ensina</h2>
+        <div class="instructor">
+            <img src="https://pbs.twimg.com/profile_images/1849803933306286081/9t4Wdiej.jpg" alt="Foto de Bryan Gripp sorrindo">
+            <div>
+                <p>Olá, eu sou Bryan Gripp, criador do curso.</p>
+                <p>Sou apaixonado por tecnologia e ensino prático.</p>
+                <p>Criei este curso para ajudar pessoas a entender e usar a Inteligência Artificial de verdade, aplicando no cotidiano — sem nomes técnicos, sem enrolação, e com resultados reais desde a primeira aula.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials" id="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="testimonial">
+            <p>“Eu achava que IA era coisa de programador. Agora uso o ChatGPT pra criar textos e ideias no meu trabalho!”</p>
+            <p>— Fabiola, aluna do Rio de Janeiro</p>
+        </div>
+        <div class="testimonial">
+            <p>“O Bryan explica de um jeito simples e divertido. Aprendi a usar IA pra organizar minha rotina e criar imagens lindas.”</p>
+            <p>— Christine Dias., Rio de Janeiro</p>
+        </div>
+    </section>
+
+    <!-- Perguntas Frequentes (opcional) -->
+    <section class="faq" id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <details>
+            <summary>Preciso ter experiência com tecnologia?</summary>
+            <p>Não! As aulas são projetadas para iniciantes, sem conhecimento prévio necessário. Tudo é explicado de forma simples e passo a passo.</p>
+        </details>
+        <details>
+            <summary>As aulas ficam gravadas?</summary>
+            <p>Sim, você pode solicitar a gravação das aulas para revisar depois, no seu ritmo.</p>
+        </details>
+        <details>
+            <summary>Posso fazer as aulas pelo celular?</summary>
+            <p>Sim, as aulas são online e compatíveis com qualquer dispositivo: computador, tablet ou celular.</p>
+        </details>
+        <details>
+            <summary>Como funciona o pagamento?</summary>
+            <p>O pagamento é seguro via boleto ou Pix. Você recebe acesso imediato após a confirmação.</p>
+        </details>
+    </section>
+
+    <!-- Chamada Final -->
+    <section class="final-call" id="final">
+        <h2>Chamada Final!!!</h2>
+        <p>A inteligência artificial já está mudando o mundo — e você pode aprender a usá-la a seu favor.</p>
+        <p>Dê o primeiro passo e descubra como ela pode facilitar sua vida.</p>
+        <a href="https://wa.me/5521988781658?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20aulas%20de%20IA!" class="cta-button">Quero começar agora!</a>
+    </section>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5521988781658?text=Oi!%20Quero%20saber%20mais%20sobre%20as%20aulas%20de%20IA!" id="whatsapp-fixed">Fale comigo no WhatsApp</a>
+
+    <script>
+        // Animações ao scroll para seções
+        const sections = document.querySelectorAll('section');
+        const options = {
+            threshold: 0.1
+        };
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Animações ao scroll para itens de lista em benefits
+        const benefitItems = document.querySelectorAll('.benefits li');
+        const itemObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+        benefitItems.forEach(item => {
+            itemObserver.observe(item);
+        });
+
+        // Animações ao scroll para depoimentos
+        const testimonials = document.querySelectorAll('.testimonial');
+        const testimonialObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+        testimonials.forEach(testimonial => {
+            testimonialObserver.observe(testimonial);
+        });
+    </script>
+</body>
+</html>
